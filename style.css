@@ -154,7 +154,7 @@ h3 {
   padding: 130px 40px 80px;
   background:
     linear-gradient(rgba(46, 43, 40, 0.18), rgba(46, 43, 40, 0.30)),
-    url("img/hero-firenze.png");
+    url("img/hero-firenze.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -437,7 +437,7 @@ h3 {
   position: relative;
   background:
     linear-gradient(rgba(46, 43, 40, 0.48), rgba(46, 43, 40, 0.48)),
-    url("img/san-miniato-area.png");
+    url("img/san-miniato-area.jpg");
   background-size: cover;
   background-position: 72% 24%;
   background-repeat: no-repeat;
