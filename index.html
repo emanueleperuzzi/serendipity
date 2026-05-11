@@ -2,43 +2,61 @@
 <html lang="it">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Serendipity Firenze Beccaria</title>
+  <title>Serendipity Orcagna | Appartamento a Firenze vicino Piazza Beccaria</title>
+
   <meta name="description"
-    content="Serendipity Firenze Beccaria: un appartamento accogliente con spazio esterno privato, vicino al centro di Firenze." />
+    content="Serendipity Orcagna è un appartamento tranquillo a Firenze, vicino a Piazza Beccaria, Sant'Ambrogio e Santa Croce. Una casa curata con spazio esterno, Wi-Fi veloce e link diretto ad Airbnb.">
 
-  <link rel="stylesheet" href="style.css" />
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.serendipityorcagna.it/">
+
+  <meta property="og:title" content="Serendipity Orcagna | Appartamento a Firenze vicino Piazza Beccaria">
+  <meta property="og:description"
+    content="Una casa tranquilla e curata a Firenze, vicino al centro ma fuori dal caos. Spazio esterno, Wi-Fi veloce e link diretto ad Airbnb.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.serendipityorcagna.it/">
+  <meta property="og:image" content="https://www.serendipityorcagna.it/img/hero-firenze.jpg">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <a href="#" class="logo">Serendipity</a>
+<!-- HEADER -->
+<header class="site-header">
+  <a href="#top" class="logo" aria-label="Torna all'inizio">
+    Serendipity Orcagna
+  </a>
 
-    <nav class="main-nav">
-      <a href="#casa">La casa</a>
-      <a href="#servizi">Comfort</a>
-      <a href="#relax">Relax & lavoro</a>
-      <a href="#quartiere">Firenze</a>
-      <a href="#recensioni">Recensioni</a>
-      <a class="nav-cta" href="https://www.airbnb.it/h/serendipityfirenzebeccaria" target="_blank"
-        rel="noopener noreferrer">
-        Airbnb
-      </a>
-    </nav>
-  </header>
+  <a href="#top" class="header-symbol" aria-label="Torna all'inizio">
+    <img src="img/logo-serendipity.png" alt="">
+  </a>
+
+  <nav class="main-nav" aria-label="Navigazione principale">
+    <a href="#casa">La casa</a>
+    <a href="#servizi">Comfort</a>
+    <a href="#relax">Relax & lavoro</a>
+    <a href="#quartiere">Firenze</a>
+    <a href="#recensioni">Recensioni</a>
+    <a class="nav-cta" href="https://www.airbnb.it/h/serendipityfirenzebeccaria" target="_blank"
+      rel="noopener noreferrer">
+      Airbnb
+    </a>
+  </nav>
+</header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <p class="eyebrow">Appartamento a Firenze · Piazza Beccaria</p>
-      <h1>Un’oasi di calma vicino al cuore di Firenze.</h1>
+      <p class="eyebrow">Appartamento a Firenze · Via Orcagna</p>
+      <h1>Un’oasi di relax vicino al centro.</h1>
       <p class="hero-text">
-        Serendipity è una casa vera, accogliente e silenziosa: uno spazio dove rilassarsi,
-        lavorare bene e vivere Firenze con il passo lento di chi vuole sentirsi a casa.
+        Una casa curata, a pochi passi da Piazza Beccaria, Sant’Ambrogio e Santa Croce: uno spazio tranquillo dove
+        riposare, lavorare bene e vivere Firenze senza fretta.
       </p>
       <a href="#prenota" class="btn primary">Vedi disponibilità su Airbnb</a>
     </div>
@@ -49,18 +67,25 @@
     <div class="container two-columns">
       <div>
         <p class="eyebrow">La casa</p>
-        <h2>Più di un appoggio per visitare la città.</h2>
+        <h2>Un posto dove sentirsi a casa a Firenze.</h2>
       </div>
 
       <div>
         <p>
-          Serendipity è pensato per chi cerca Firenze, ma anche pace. L’appartamento si trova
-          in una zona comoda, fuori dal caos del centro storico ma abbastanza vicina da poterlo
-          raggiungere a piedi.
+          Un appartamento per chi cerca una base comoda e rilassante a Firenze: vicino al
+          centro storico, ma fuori dal caos delle zone più turistiche. L’area è servita da
+          supermercati, negozi, ristoranti e caffetterie a pochi passi.
         </p>
+
         <p>
-          Il grande spazio esterno è il suo punto speciale: un luogo dove fare colazione,
-          leggere, lavorare, cenare o semplicemente staccare dopo una giornata in città.
+          Gli spazi interni sono ampi e luminosi, con dettagli curati e funzionali. Lo stile
+          di casa si fonde con linee più moderne, creando un’atmosfera confortevole e
+          autentica.
+        </p>
+
+        <p>
+          Lo spazio esterno privato aggiunge respiro e libertà di movimento. È un luogo ideale per colazioni e cene
+          all’aperto, o semplicemente per una lettura o una tazza di tè, lontano dal trambusto della città.
         </p>
       </div>
     </div>
@@ -69,8 +94,17 @@
   <!-- GALLERY -->
   <section class="gallery-section">
     <div class="gallery-viewer">
-      <div class="gallery-featured">
+
+      <div class="gallery-featured" tabindex="0" aria-label="Galleria immagini Serendipity">
+        <button class="gallery-arrow gallery-arrow-prev" type="button" aria-label="Foto precedente">
+          ‹
+        </button>
+
         <img id="featuredImage" src="img/living.jpg" alt="Soggiorno di Serendipity">
+
+        <button class="gallery-arrow gallery-arrow-next" type="button" aria-label="Foto successiva">
+          ›
+        </button>
       </div>
 
       <div class="gallery-thumbs">
@@ -149,8 +183,8 @@
         <p class="eyebrow">Comfort</p>
         <h2>Tutto quello che serve per sentirsi a casa.</h2>
         <p>
-          Non solo un alloggio per dormire: una casa completa, curata e funzionale,
-          adatta sia a una vacanza lenta sia a un soggiorno di lavoro.
+          Non solo un posto letto, ma uno spazio living dove poter trascorrere con serenità ogni momento della
+          giornata...
         </p>
       </div>
 
@@ -187,7 +221,7 @@
               </svg>
             </span>
             <h3>Casa completa</h3>
-            <p>Cucina attrezzata, ambienti comodi e tutto il necessario per un soggiorno pratico.</p>
+            <p>Cucina attrezzata, spazi comodi, elettrodomestici, per soggiorni anche duraturi.</p>
           </article>
 
           <article class="card">
@@ -200,7 +234,7 @@
               </svg>
             </span>
             <h3>Wi-Fi veloce</h3>
-            <p>Connessione stabile, ideale anche per smart working, videochiamate e lavoro da remoto.</p>
+            <p>Connessione in fibra ottica ultra fast, affidabilità e stabilità per il lavoro remoto.</p>
           </article>
 
           <article class="card">
@@ -245,7 +279,7 @@
             </span>
 
             <h3>Clima e comfort</h3>
-            <p>Ambienti accoglienti e confortevoli per riposare bene in ogni stagione.</p>
+            <p>I termoarredi e i condizionatori garantiscono un ambiente piacevole in ogni stagione.</p>
           </article>
 
           <article class="card">
@@ -256,7 +290,8 @@
               </svg>
             </span>
             <h3>Posizione comoda</h3>
-            <p>Vicino a Piazza Beccaria, con il centro raggiungibile a piedi senza rinunciare alla calma.</p>
+            <p>Zona servita di tutto, facile accesso a negozi, ristoranti e attrazioni turistiche. Centro a 10 minuti a
+              piedi.</p>
           </article>
 
           <article class="card">
@@ -303,42 +338,56 @@
       <div class="neighborhood-panel">
         <div class="neighborhood-content">
           <p class="eyebrow">Firenze</p>
-          <h2>Vivere Firenze, senza fretta.</h2>
+          <h2>Vivere Firenze, con tranquillità</h2>
           <p>
-            Serendipity si trova vicino a Piazza Beccaria, in una zona comoda e tranquilla
-            da cui raggiungere facilmente il centro storico, Santa Croce, Sant’Ambrogio,
-            i Lungarni e le colline fiorentine.
+            Serendipity si trova vicino a Piazza Beccaria, in una zona comoda e silenziosa,
+            a pochi passi dal centro storico, dai quartieri di Santa Croce, Sant’Ambrogio,
+            dai Lungarni e dalle colline fiorentine.
           </p>
           <p>
-            È il posto giusto per chi vuole vivere Firenze con calma: arte, passeggiate,
-            buon cibo e poi il piacere di tornare in una casa accogliente, lontana dal caos
-            più frenetico.
+            Lasciati tentare dalla tradizione, dalla cultura e dalla bellezza, e vivi la città autentica come un vero
+            fiorentino.
           </p>
         </div>
 
         <div class="neighborhood-cards">
+
+
           <article class="place-card">
-            <h3>Arte e musei</h3>
-            <p>
-              Santa Croce, il centro storico, gallerie, chiese e palazzi: da Serendipity
-              puoi raggiungere facilmente il cuore artistico di Firenze.
-            </p>
+            <img class="place-card-media place-card-media-arte" src="img/arte-wide.jpg" alt="Arte e musei a Firenze">
+
+            <div class="place-card-body">
+              <h3>Arte e musei</h3>
+              <p>
+                Scopri l’arte e la cultura visitando musei di fama mondiale, raggiungibili in pochi minuti a piedi.
+              </p>
+            </div>
           </article>
 
           <article class="place-card">
-            <h3>Natura e dintorni</h3>
-            <p>
-              I Lungarni, le colline, i giardini e le passeggiate panoramiche offrono
-              momenti di quiete a pochi passi dalla città più intensa.
-            </p>
+            <img class="place-card-media place-card-media-natura" src="img/natura-wide.jpg"
+              alt="Parchi e giardini a Firenze">
+
+            <div class="place-card-body">
+              <h3>Natura e dintorni</h3>
+              <p>
+                Immergiti nelle bellezze naturali dei parchi e dei giardini cittadini, perfetti per passeggiate e
+                momenti
+                rilassanti.
+              </p>
+            </div>
           </article>
 
           <article class="place-card">
-            <h3>Cibo e cucina</h3>
-            <p>
-              Tra Sant’Ambrogio, trattorie, botteghe e locali di quartiere, Firenze si
-              scopre anche a tavola, con calma e autenticità.
-            </p>
+            <img class="place-card-media place-card-media-cibo" src="img/cibo-wide.jpg" alt="Cibo e cucina a Firenze">
+
+            <div class="place-card-body">
+              <h3>Cibo e cucina</h3>
+              <p>
+                Assapora i piatti tipici nei ristoranti della città, o dedicati alle tue ricette preferite direttamente
+                nella cucina di casa.
+              </p>
+            </div>
           </article>
         </div>
       </div>
@@ -418,19 +467,66 @@
   <!-- Cambio immagine gallery -->
   <script>
     const featuredImage = document.getElementById("featuredImage");
-    const thumbs = document.querySelectorAll(".thumb");
+    const thumbs = Array.from(document.querySelectorAll(".thumb"));
+    const prevButton = document.querySelector(".gallery-arrow-prev");
+    const nextButton = document.querySelector(".gallery-arrow-next");
+    const galleryFeatured = document.querySelector(".gallery-featured");
 
-    thumbs.forEach((thumb) => {
-      thumb.addEventListener("click", () => {
-        const newSrc = thumb.dataset.full;
-        const newAlt = thumb.dataset.alt;
+    let currentIndex = 0;
 
-        featuredImage.src = newSrc;
-        featuredImage.alt = newAlt;
+    function showImage(index) {
+      const thumb = thumbs[index];
 
-        thumbs.forEach((item) => item.classList.remove("is-active"));
-        thumb.classList.add("is-active");
+      if (!thumb) {
+        return;
+      }
+
+      featuredImage.src = thumb.dataset.full;
+      featuredImage.alt = thumb.dataset.alt;
+
+      thumbs.forEach((item) => item.classList.remove("is-active"));
+      thumb.classList.add("is-active");
+
+      thumb.scrollIntoView({
+        block: "nearest",
+        inline: "nearest"
       });
+
+      currentIndex = index;
+    }
+
+    thumbs.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => {
+        showImage(index);
+      });
+    });
+
+    prevButton.addEventListener("click", () => {
+      const previousIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+      showImage(previousIndex);
+    });
+
+    nextButton.addEventListener("click", () => {
+      const nextIndex = (currentIndex + 1) % thumbs.length;
+      showImage(nextIndex);
+    });
+
+    galleryFeatured.addEventListener("click", () => {
+      galleryFeatured.focus();
+    });
+
+    galleryFeatured.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        const previousIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+        showImage(previousIndex);
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        const nextIndex = (currentIndex + 1) % thumbs.length;
+        showImage(nextIndex);
+      }
     });
   </script>
 
