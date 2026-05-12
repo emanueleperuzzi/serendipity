@@ -8,7 +8,7 @@
   <title>Serendipity Orcagna | Appartamento a Firenze vicino Piazza Beccaria</title>
 
   <meta name="description"
-    content="Serendipity Orcagna è un appartamento tranquillo a Firenze, vicino a Piazza Beccaria, Sant’Ambrogio e Santa Croce. Una casa curata con spazio esterno, Wi-Fi veloce e link diretto ad Airbnb.">
+    content="Serendipity Orcagna è un appartamento tranquillo a Firenze, vicino a Piazza Beccaria, Sant'Ambrogio e Santa Croce. Una casa curata con spazio esterno, Wi-Fi veloce e link diretto ad Airbnb.">
 
   <meta name="robots" content="index, follow">
 
@@ -56,7 +56,7 @@
       <h1>Un’oasi di relax vicino al centro.</h1>
       <p class="hero-text">
         A pochi passi da Piazza Beccaria, Sant’Ambrogio e Santa Croce: uno spazio tranquillo dove
-        riposare, lavorare e vivere la città lontano dal caos.
+        riposare, lavorare e vivere la citta' lontano dal caos.
       </p>
       <a href="#prenota" class="btn primary">Vedi disponibilità su Airbnb</a>
     </div>
@@ -72,8 +72,8 @@
 
       <div>
         <p>
-          L’appartamento è a soli 1,5 km dal Duomo di Firenze, in una zona residenziale ben collegata al centro
-          storico. L'ideale per coppie che vogliano la comodità di un ambiente domestico, e la vicinanza a tutte le
+          L'appartmaneto e' a soli 1.5Km dal Duomo di Firenze, in una zona residenziale ben collegata al centro storico.
+          L'ideale per coppie che vogliano la comodita' di un ambiente domestico, e la vicinanza a tutte le
           principali attrazioni.
         </p>
 
@@ -84,8 +84,8 @@
         </p>
 
         <p>
-          L’ampio spazio esterno privato aggiunge respiro e libertà di movimento. È un luogo ideale per fare colazione,
-          cenare all’aperto o semplicemente leggere qualcosa sorseggiando una tazza di tè.
+          L'ampio spazio esterno privato aggiunge respiro e libertà di movimento, e' un luogo ideale dove fare colazione
+          o cena, o semplicemente per una buona lettura sorseggiando una tazza di te'.
         </p>
       </div>
     </div>
@@ -289,7 +289,8 @@
               </svg>
             </span>
             <h3>Posizione strategica</h3>
-            <p>Bar, ristoranti, supermercati, negozi e fermate dei mezzi pubblici, per raggiungere facilmente il centro.</p>
+            <p>Bar, ristoranti, supermercati, negozi e fermate dei mezzi pubblici, per raggiungere facilmente il centro.
+            </p>
           </article>
 
           <article class="card">
@@ -311,18 +312,32 @@
   <!-- RELAX / LAVORO -->
   <section id="relax" class="section split-section">
     <div class="container split-card">
+      <!--       <div class="split-text">
+        <p class="eyebrow">Relax o lavoro</p>
+        <h2>Hai bisogno di lavorare?</h2>
+        <p>
+          Serendipity è ideale come ufficio. Inquinamento acustico zero,
+          postazione ampia e luminosa, WiFi-6 ultra veloce ti proietteranno in un'oasi di produttivita'.
+        </p>
+        <p>
+          Inzia la giornata con un buon caffe', e dopo il lavoro rilassati con una cenetta a casa, o raggiungi la movida
+          in 10 minuti a piedi.
+        </p>
+      </div>
+ -->
       <div class="split-text">
         <p class="eyebrow">Smart Working & Relax</p>
         <h2>Il tuo ufficio lontano da casa</h2>
         <p>
           Serendipity è il rifugio perfetto per chi cerca concentrazione. Grazie all'<strong>inquinamento acustico
             zero</strong>,
-          una postazione ampia e luminosa e il <strong>Wi-Fi 6 ultraveloce</strong> trasformerai ogni task in un
+          una postazione ampia e luminosa e il <strong>WiFi-6 ultra veloce</strong>, trasformerai ogni task in un
           momento di puro focus.
         </p>
         <p>
-          Inizia la giornata con un vero caffè italiano e, dopo il dovere, scegli il tuo relax:
-          una cena tranquilla in casa o un tuffo nella movida, raggiungibile con una passeggiata di soli 10 minuti.
+          Inizia la giornata con un vero caffè italiano e, dopo il dovere, scegli il tuo relax: una cena tranquilla in
+          casa
+          o un tuffo nella movida, raggiungibile con una passeggiata di soli 10 minuti.
         </p>
       </div>
 
@@ -340,7 +355,7 @@
           <p class="eyebrow">Firenze</p>
           <h2>Tutta la città a portata di mano</h2>
           <p>
-            Vuoi vivere come un vero fiorentino? Tra <strong>Piazza Beccaria</strong> e l’anima verace di
+            Vuoi vivere come un vero fiorentino? Tra <strong>Piazza Beccaria</strong> e l'anima verace di
             <strong>Sant’Ambrogio</strong> e <strong>Santa Croce</strong>, scoprirai la Firenze più autentica,
             fatta di botteghe storiche, mercati rionali e sapori della cucina tradizionale.
           </p>
@@ -351,8 +366,8 @@
           </p>
           <p>
             Cerchi la magia? Segui i Lungarni per ammirare il tramonto da <strong>Piazzale Michelangelo</strong>
-            o rigenerati tra il verde dei vicini <strong>colli fiorentini</strong>. È la posizione ideale
-            per vivere la città da vero protagonista.
+            o rigenerati tra il verde dei vicini <strong>colli fiorentini</strong>. È la posizione strategica
+            ideale per vivere la città da vero protagonista.
           </p>
         </div>
 
@@ -422,7 +437,7 @@
           <p class="eyebrow">Prenotazione</p>
           <p>
             Verifica disponibilità e tariffe in tempo reale sulla pagina ufficiale di
-            <strong>Serendipity su Airbnb</strong>. Assicurati il tuo rifugio fiorentino in pochi clic.
+            <strong>Serendipity su Airbnb</strong>. Assicurati il tuo rifugio fiorentino in pochi click.
           </p>
         </div>
 
@@ -472,69 +487,69 @@
 
   <!-- Cambio immagine gallery -->
   <script>
-  const featuredImage = document.getElementById("featuredImage");
-  const thumbs = Array.from(document.querySelectorAll(".thumb"));
-  const prevButton = document.querySelector(".gallery-arrow-prev");
-  const nextButton = document.querySelector(".gallery-arrow-next");
-  const galleryFeatured = document.querySelector(".gallery-featured");
+    const featuredImage = document.getElementById("featuredImage");
+    const thumbs = Array.from(document.querySelectorAll(".thumb"));
+    const prevButton = document.querySelector(".gallery-arrow-prev");
+    const nextButton = document.querySelector(".gallery-arrow-next");
+    const galleryFeatured = document.querySelector(".gallery-featured");
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  function showImage(index) {
-    const thumb = thumbs[index];
+    function showImage(index) {
+      const thumb = thumbs[index];
 
-    if (!thumb) {
-      return;
+      if (!thumb) {
+        return;
+      }
+
+      featuredImage.src = thumb.dataset.full;
+      featuredImage.alt = thumb.dataset.alt;
+
+      thumbs.forEach((item) => item.classList.remove("is-active"));
+      thumb.classList.add("is-active");
+
+      thumb.scrollIntoView({
+        block: "nearest",
+        inline: "nearest"
+      });
+
+      currentIndex = index;
     }
 
-    featuredImage.src = thumb.dataset.full;
-    featuredImage.alt = thumb.dataset.alt;
-
-    thumbs.forEach((item) => item.classList.remove("is-active"));
-    thumb.classList.add("is-active");
-
-    thumb.scrollIntoView({
-      block: "nearest",
-      inline: "nearest"
+    thumbs.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => {
+        showImage(index);
+      });
     });
 
-    currentIndex = index;
-  }
-
-  thumbs.forEach((thumb, index) => {
-    thumb.addEventListener("click", () => {
-      showImage(index);
-    });
-  });
-
-  prevButton.addEventListener("click", () => {
-    const previousIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
-    showImage(previousIndex);
-  });
-
-  nextButton.addEventListener("click", () => {
-    const nextIndex = (currentIndex + 1) % thumbs.length;
-    showImage(nextIndex);
-  });
-
-  galleryFeatured.addEventListener("click", () => {
-    galleryFeatured.focus();
-  });
-
-  galleryFeatured.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") {
-      event.preventDefault();
+    prevButton.addEventListener("click", () => {
       const previousIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
       showImage(previousIndex);
-    }
+    });
 
-    if (event.key === "ArrowRight") {
-      event.preventDefault();
+    nextButton.addEventListener("click", () => {
       const nextIndex = (currentIndex + 1) % thumbs.length;
       showImage(nextIndex);
-    }
-  });
-</script>
+    });
+
+    galleryFeatured.addEventListener("click", () => {
+      galleryFeatured.focus();
+    });
+
+    galleryFeatured.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        const previousIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+        showImage(previousIndex);
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        const nextIndex = (currentIndex + 1) % thumbs.length;
+        showImage(nextIndex);
+      }
+    });
+  </script>
 
 </body>
 
