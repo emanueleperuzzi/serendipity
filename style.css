@@ -656,26 +656,81 @@ h3 {
   background: var(--cream-light);
 }
 
-.coming-soon-box {
-  max-width: 760px;
+.review-card {
+  max-width: 780px;
   margin: 0 auto;
-  text-align: center;
-  padding: 54px 42px;
-  border-radius: 34px;
-  background: var(--cream);
+  padding: 32px 38px;
+  border-radius: 30px;
+  background: var(--cream-light);
   border: 1px solid var(--line);
-  box-shadow: 0 20px 60px rgba(46, 43, 40, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-.coming-soon-box h2 {
-  color: var(--rosewood);
-  margin-bottom: 18px;
+.review-stars {
+  color: var(--terracotta);
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
-.coming-soon-box p {
+.review-card .review-quote {
+  max-height: 148px;
+  overflow-y: auto;
+  margin: 0;
+  padding-right: 12px;
+  color: var(--dark);
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.52;
+  text-align: left;
+}
+
+.review-card .review-quote p {
+  margin: 0 0 11px;
+}
+
+.review-card .review-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.review-meta {
+  position: relative;
+  margin-top: 18px;
+  min-height: 22px;
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.75;
+  text-align: center;
+}
+
+.review-author {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review-author strong {
+  color: var(--teal);
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.review-author span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.review-date {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 0.72rem;
+  opacity: 0.55;
+  white-space: nowrap;
 }
 
 /* BOOKING */
@@ -1009,6 +1064,30 @@ h3 {
 
   .neighborhood-content p {
     font-size: 16px;
+  }
+
+  .review-card {
+    padding: 28px 22px;
+    border-radius: 24px;
+  }
+
+  .review-card .review-quote {
+    max-height: 165px;
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  .review-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .review-date {
+    position: static;
+    transform: none;
+    font-size: 0.72rem;
   }
 
   .booking-card {
