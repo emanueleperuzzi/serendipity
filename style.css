@@ -454,6 +454,10 @@ h3 {
   align-self: center;
 }
 
+.card-quiet h3 {
+  align-self: start;
+}
+
 .card p {
   color: var(--muted);
   grid-column: 1 / -1;
