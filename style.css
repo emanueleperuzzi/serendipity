@@ -346,25 +346,26 @@ h3 {
   position: absolute;
   top: 50%;
   z-index: 3;
-  width: 46px;
-  height: 64px;
+  width: 34px;
+  height: 58px;
   border: 0;
-  border-radius: 999px;
-  background: rgba(46, 43, 40, 0.34);
-  color: var(--cream-light);
-  font-size: 42px;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(251, 247, 240, 0.72);
+  font-size: 52px;
   line-height: 1;
   cursor: pointer;
   transform: translateY(-50%);
   opacity: 0;
-  transition: opacity 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  text-shadow: 0 2px 10px rgba(46, 43, 40, 0.45);
+  transition: opacity 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 .gallery-arrow:hover {
-  background: rgba(46, 43, 40, 0.55);
-  transform: translateY(-50%) scale(1.04);
+  background: transparent;
+  color: var(--cream-light);
+  transform: translateY(-50%) scale(1.08);
 }
-
 .gallery-featured:hover .gallery-arrow,
 .gallery-arrow:focus-visible {
   opacity: 1;
@@ -658,15 +659,43 @@ h3 {
   padding-bottom: 58px;
 }
 
-.review-card {
-  max-width: 780px;
+.reviews-carousel {
+  position: relative;
+  max-width: 900px;
   margin: 0 auto;
+}
+
+
+
+.reviews-track {
+  display: flex;
+  gap: 28px;
+  width: min(820px, 100%);
+  margin: 0 auto -52px;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 20px 52px;
+  scrollbar-width: none;
+}
+
+.reviews-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  margin: 0;
   padding: 32px 38px;
   border-radius: 30px;
   background: var(--cream-light);
   border: 1px solid var(--line);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .review-stars {
@@ -699,7 +728,8 @@ h3 {
 
 .review-meta {
   position: relative;
-  margin-top: 18px;
+  margin-top: auto;
+  padding-top: 18px;
   min-height: 22px;
   color: var(--muted);
   text-align: center;
@@ -733,6 +763,37 @@ h3 {
   font-size: 0.72rem;
   opacity: 0.55;
   white-space: nowrap;
+}
+
+.review-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 34px;
+  height: 58px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(46, 43, 40, 0.42);
+  font-size: 46px;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: color 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+}
+
+.review-arrow:hover {
+  background: transparent;
+  color: var(--teal);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.review-arrow-prev {
+  left: 0;
+}
+
+.review-arrow-next {
+  right: 0;
 }
 
 /* BOOKING */
@@ -1112,6 +1173,60 @@ h3 {
   .reviews-section {
     padding-top: 52px;
     padding-bottom: 46px;
+  }
+
+  .reviews-carousel {
+    max-width: 100%;
+  }
+
+  .reviews-track {
+    gap: 16px;
+    width: 100%;
+    margin: 0 auto -44px;
+    overflow: hidden;
+    padding: 4px 8px 44px;
+    scroll-padding-inline: 8px;
+  }
+
+  .review-card {
+    flex: 0 0 100%;
+    padding: 28px 22px;
+    border-radius: 24px;
+  }
+
+  .review-card .review-quote {
+    max-height: 165px;
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  .review-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .review-date {
+    position: static;
+    transform: none;
+    font-size: 0.72rem;
+  }
+
+  .review-arrow {
+    width: 28px;
+    height: 46px;
+    font-size: 38px;
+    background: transparent;
+    color: rgba(46, 43, 40, 0.42);
+  }
+
+  .review-arrow-prev {
+    left: -2px;
+  }
+
+  .review-arrow-next {
+    right: -2px;
   }
 
   .booking-card {

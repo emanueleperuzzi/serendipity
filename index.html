@@ -431,43 +431,80 @@
         <h2>Cosa dicono gli ospiti</h2>
       </div>
 
-      <article class="review-card">
-        <div class="review-stars" aria-label="Valutazione 5 su 5">
-          ★★★★★
+      <div class="reviews-carousel" data-review-carousel>
+        <button class="review-arrow review-arrow-prev" type="button" aria-label="Recensione precedente">
+          ‹
+        </button>
+
+        <div class="reviews-track" tabindex="0" aria-label="Recensioni degli ospiti">
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="Valutazione 5 su 5">
+              ★★★★★
+            </div>
+
+            <blockquote class="review-quote">
+              <p>
+                Abbiamo trascorso un soggiorno assolutamente fantastico in questo appartamento a Firenze.
+                Tutto è stato perfetto dall’inizio alla fine. L’appartamento è splendidamente ristrutturato,
+                estremamente ben attrezzato, spazioso e curato con attenzione fino ai più piccoli dettagli.
+                Il giardino privato era enorme e ha reso l’intera esperienza ancora più speciale e rilassante.
+              </p>
+
+              <p>
+                Il palazzo è molto bello e tranquillo, e la posizione è ottima per esplorare la città,
+                continuando però a sentirsi in un contesto comodo e autenticamente locale.
+              </p>
+
+              <p>
+                Chiara e Serena sono state incredibilmente gentili, disponibili e comunicative per tutta la durata
+                del soggiorno. Si percepisce davvero quanta cura e attenzione siano state dedicate all’appartamento
+                e all’accoglienza degli ospiti.
+              </p>
+
+              <p>
+                Torneremo sicuramente!
+              </p>
+            </blockquote>
+
+            <footer class="review-meta">
+              <div class="review-author">
+                <strong>David</strong>
+                <span>Airbnb</span>
+              </div>
+              <span class="review-date">maggio 2026</span>
+            </footer>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="Valutazione 5 su 5">
+              ★★★★★
+            </div>
+
+            <blockquote class="review-quote">
+              <p>
+                Bellissima proprietà! Ben arredata e ben fornita di servizi. Ci si sente come a casa!
+                Chiara è stata sempre reattiva, anche al di fuori dell'orario di lavoro.
+                Quartiere molto sicuro e il Duomo è raggiungibile a piedi in circa 30 minuti.
+                Consigliatissimo!
+              </p>
+            </blockquote>
+
+            <footer class="review-meta">
+              <div class="review-author">
+                <strong>Matthew</strong>
+                <span>Airbnb</span>
+              </div>
+              <span class="review-date">giugno 2026</span>
+            </footer>
+          </article>
+
         </div>
 
-        <blockquote class="review-quote">
-          <p>
-            Abbiamo trascorso un soggiorno assolutamente fantastico in questo appartamento a Firenze.
-            Tutto è stato perfetto dall’inizio alla fine. L’appartamento è splendidamente ristrutturato,
-            estremamente ben attrezzato, spazioso e curato con attenzione fino ai più piccoli dettagli.
-            Il giardino privato era enorme e ha reso l’intera esperienza ancora più speciale e rilassante.
-          </p>
-
-          <p>
-            Il palazzo è molto bello e tranquillo, e la posizione è ottima per esplorare la città,
-            continuando però a sentirsi in un contesto comodo e autenticamente locale.
-          </p>
-
-          <p>
-            Chiara e Serena sono state incredibilmente gentili, disponibili e comunicative per tutta la durata
-            del soggiorno. Si percepisce davvero quanta cura e attenzione siano state dedicate all’appartamento
-            e all’accoglienza degli ospiti.
-          </p>
-
-          <p>
-            Torneremo sicuramente!
-          </p>
-        </blockquote>
-
-        <footer class="review-meta">
-          <div class="review-author">
-            <strong>David</strong>
-            <span>Airbnb</span>
-          </div>
-          <span class="review-date">maggio 2026</span>
-        </footer>
-      </article>
+        <button class="review-arrow review-arrow-next" type="button" aria-label="Recensione successiva">
+          ›
+        </button>
+      </div>
     </div>
   </section>
 
@@ -591,6 +628,77 @@
         showImage(nextIndex);
       }
     });
+  </script>
+
+  <!-- Cambio recensione -->
+  <script>
+    (() => {
+      const carousel = document.querySelector("[data-review-carousel]");
+
+      if (!carousel) {
+        return;
+      }
+
+      const track = carousel.querySelector(".reviews-track");
+      const cards = Array.from(carousel.querySelectorAll(".review-card"));
+      const prevButton = carousel.querySelector(".review-arrow-prev");
+      const nextButton = carousel.querySelector(".review-arrow-next");
+
+      let currentReviewIndex = 0;
+
+      function showReview(index) {
+        if (!cards.length) {
+          return;
+        }
+
+        currentReviewIndex = (index + cards.length) % cards.length;
+
+        cards[currentReviewIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center"
+        });
+      }
+
+      prevButton.addEventListener("click", () => {
+        showReview(currentReviewIndex - 1);
+      });
+
+      nextButton.addEventListener("click", () => {
+        showReview(currentReviewIndex + 1);
+      });
+
+      track.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          showReview(currentReviewIndex - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          showReview(currentReviewIndex + 1);
+        }
+      });
+
+      track.addEventListener("scroll", () => {
+        const trackCenter = track.scrollLeft + track.clientWidth / 2;
+
+        let nearestIndex = 0;
+        let nearestDistance = Infinity;
+
+        cards.forEach((card, index) => {
+          const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+          const distance = Math.abs(cardCenter - trackCenter);
+
+          if (distance < nearestDistance) {
+            nearestDistance = distance;
+            nearestIndex = index;
+          }
+        });
+
+        currentReviewIndex = nearestIndex;
+      }, { passive: true });
+    })();
   </script>
 
 </body>

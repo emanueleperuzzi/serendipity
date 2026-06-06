@@ -421,53 +421,90 @@
     </div>
   </section>
 
-<!-- REVIEWS -->
-<section id="recensioni" class="section reviews-section">
-  <div class="container">
-    <div class="section-heading center">
-      <p class="eyebrow">Reviews</p>
-      <h2>What guests are saying</h2>
-    </div>
-
-    <article class="review-card">
-      <div class="review-stars" aria-label="5 out of 5 rating">
-        ★★★★★
+  <!-- REVIEWS -->
+  <section id="reviews" class="section reviews-section">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow">Reviews</p>
+        <h2>What guests say</h2>
       </div>
 
-      <blockquote class="review-quote">
-        <p>
-          We had an absolutely amazing stay at this apartment in Florence.
-          Everything was perfect from start to finish. The apartment is beautifully renovated,
-          extremely well equipped, spacious, and thoughtfully designed down to the smallest details.
-          The private garden was huge and made the whole experience feel even more special and relaxing.
-        </p>
+      <div class="reviews-carousel" data-review-carousel>
+        <button class="review-arrow review-arrow-prev" type="button" aria-label="Previous review">
+          ‹
+        </button>
 
-        <p>
-          The building itself is lovely and peaceful, and the location was great for exploring the city
-          while still feeling comfortable and local.
-        </p>
+        <div class="reviews-track" tabindex="0" aria-label="Guest reviews">
 
-        <p>
-          Chiara and Serena were incredibly kind, responsive, and communicative throughout the entire stay.
-          You could really feel how much care and attention was invested in the apartment and in making
-          guests feel welcome.
-        </p>
+          <article class="review-card">
+            <div class="review-stars" aria-label="Rating 5 out of 5">
+              ★★★★★
+            </div>
 
-        <p>
-          We will come back for sure!
-        </p>
-      </blockquote>
+            <blockquote class="review-quote">
+              <p>
+                We had an absolutely fantastic stay in this apartment in Florence.
+                Everything was perfect from beginning to end. The apartment is beautifully renovated,
+                extremely well equipped, spacious and cared for with attention to even the smallest details.
+                The private garden was huge and made the whole experience even more special and relaxing.
+              </p>
 
-      <footer class="review-meta">
-        <div class="review-author">
-          <strong>David</strong>
-          <span>Airbnb</span>
+              <p>
+                The building is very beautiful and quiet, and the location is excellent for exploring the city
+                while still feeling comfortable and genuinely local.
+              </p>
+
+              <p>
+                Chiara and Serena were incredibly kind, helpful and communicative throughout our stay.
+                You can truly feel how much care and attention have been dedicated to the apartment
+                and to welcoming guests.
+              </p>
+
+              <p>
+                We will definitely come back!
+              </p>
+            </blockquote>
+
+            <footer class="review-meta">
+              <div class="review-author">
+                <strong>David</strong>
+                <span>Airbnb</span>
+              </div>
+              <span class="review-date">May 2026</span>
+            </footer>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="Rating 5 out of 5">
+              ★★★★★
+            </div>
+
+            <blockquote class="review-quote">
+              <p>
+                Beautiful property! Nicely decorated and so well stocked with amenities.
+                Feels like home! Chiara was always responsive, even during off hours.
+                Very safe neighborhood and walk to the Duomo in around 30 minutes.
+                Highly recommended!
+              </p>
+            </blockquote>
+
+            <footer class="review-meta">
+              <div class="review-author">
+                <strong>Matthew</strong>
+                <span>Airbnb</span>
+              </div>
+              <span class="review-date">June 2026</span>
+            </footer>
+          </article>
+
         </div>
-        <span class="review-date">May 2026</span>
-      </footer>
-    </article>
-  </div>
-</section>
+
+        <button class="review-arrow review-arrow-next" type="button" aria-label="Next review">
+          ›
+        </button>
+      </div>
+    </div>
+  </section>
 
   <!-- BOOKING -->
   <section id="prenota" class="section booking-section">
@@ -588,6 +625,77 @@
         showImage(nextIndex);
       }
     });
+  </script>
+
+  <!-- Cambio recensione -->
+  <script>
+    (() => {
+      const carousel = document.querySelector("[data-review-carousel]");
+
+      if (!carousel) {
+        return;
+      }
+
+      const track = carousel.querySelector(".reviews-track");
+      const cards = Array.from(carousel.querySelectorAll(".review-card"));
+      const prevButton = carousel.querySelector(".review-arrow-prev");
+      const nextButton = carousel.querySelector(".review-arrow-next");
+
+      let currentReviewIndex = 0;
+
+      function showReview(index) {
+        if (!cards.length) {
+          return;
+        }
+
+        currentReviewIndex = (index + cards.length) % cards.length;
+
+        cards[currentReviewIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center"
+        });
+      }
+
+      prevButton.addEventListener("click", () => {
+        showReview(currentReviewIndex - 1);
+      });
+
+      nextButton.addEventListener("click", () => {
+        showReview(currentReviewIndex + 1);
+      });
+
+      track.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          showReview(currentReviewIndex - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          showReview(currentReviewIndex + 1);
+        }
+      });
+
+      track.addEventListener("scroll", () => {
+        const trackCenter = track.scrollLeft + track.clientWidth / 2;
+
+        let nearestIndex = 0;
+        let nearestDistance = Infinity;
+
+        cards.forEach((card, index) => {
+          const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+          const distance = Math.abs(cardCenter - trackCenter);
+
+          if (distance < nearestDistance) {
+            nearestDistance = distance;
+            nearestIndex = index;
+          }
+        });
+
+        currentReviewIndex = nearestIndex;
+      }, { passive: true });
+    })();
   </script>
 
 </body>
